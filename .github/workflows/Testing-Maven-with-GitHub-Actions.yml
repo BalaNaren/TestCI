@@ -1,0 +1,10 @@
+name: Testing-Maven-with-GitHub-Actions
+run-name: Testing-Maven-with-GitHub-Actions.
+on: [push]
+jobs:
+  Testing-Maven-with-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Compile and Test with maven
+        run: mvn test -Dtest=CalculatorTest
